@@ -1,0 +1,13 @@
+.hidden {
+    display: none;
+}
+
+.dropdown-header {
+    padding: 1rem;
+    background-color: lightcoral;
+}
+
+.dropdown-content {
+    padding: 1rem;
+    background-color: lightblue;
+}
