@@ -8,6 +8,6 @@ export default class Content extends React.Component {
     }
 
     render() {
-        return <div className = 'dropdown-header' onClick = {this.toggle}>{this.props.title}</div>;
+        return <div className = 'dropdown-header' onClick = {this.toggle} dangerouslySetInnerHTML = {{__html: this.props.title}} />;
     }
 }

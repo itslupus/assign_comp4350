@@ -16,7 +16,7 @@ export default class SearchBar extends React.Component {
 
     handle(event) {
         if (this.state.input !== '') {
-            
+            this.props.query(this.state.input);
         }
 
         event.preventDefault();

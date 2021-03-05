@@ -3,8 +3,9 @@
 }
 
 .dropdown-header {
+    margin-top: 1rem;
     padding: 1rem;
-    background-color: lightcoral;
+    background-color: rgb(235, 186, 186);
 }
 
 .dropdown-content {
