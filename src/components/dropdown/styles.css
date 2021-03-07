@@ -1,14 +1,13 @@
 .hidden {
-    display: none;
+	display: none;
 }
 
 .dropdown-header {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: rgb(235, 186, 186);
+	margin-top: 1rem;
+	padding: 1rem;
+	background-color: rgb(235, 186, 186);
 }
 
 .dropdown-content {
-    padding: 1rem;
-    background-color: lightblue;
+	background-color: lightblue;
 }
