@@ -1,13 +1,63 @@
+:root {
+	--post-accent: #141616;
+	--comment-accent: rgb(2, 24, 24);
+}
+
 .hidden {
 	display: none;
 }
 
 .dropdown-header {
 	margin-top: 1rem;
-	padding: 1rem;
-	background-color: rgb(235, 186, 186);
+	background-color: rgb(36, 12, 12);
 }
 
-.dropdown-content {
-	background-color: lightblue;
+.post, .comment, .post-details, pre, .dropdown-header, .comment-details {
+	padding: 1rem;
+}
+
+.post {
+	border-top: 3px solid var(--post-accent);
+	border-left: 3px solid var(--post-accent);
+	border-right: 3px solid var(--post-accent);
+}
+
+.post-wrapper:not(:first-of-type) {
+	margin-top: 1rem;
+}
+
+.comment-wrapper {
+	position: relative;
+	left: 10%;
+	width: 90%;
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+}
+
+.comment {
+	border-top: 3px solid var(--comment-accent);
+	border-left: 3px solid var(--comment-accent);
+	border-right: 3px solid var(--comment-accent);
+}
+
+.comment-details, .comment-details * {
+	background-color: var(--comment-accent);
+}
+
+.post-details, .post-details * {
+    background-color: var(--post-accent);
+}
+
+.post-details > *, .comment-details > * {
+	display: inline;
+	margin-right: 1rem;
+}
+
+.link {
+	float: right;
+}
+
+pre {
+	margin: 1rem 0 1rem 0;
+	border: 1px solid white;
 }

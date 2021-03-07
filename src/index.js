@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Dropdown from './components/dropdown'
 import SearchBar from './components/searchbar'
 
+import './styles.css';
+
 const FILTER = '!FRQGwXxmUtU64ejIEZQvfWBDz0*VIkJeHHyC7OzXp3k)QJFEGO*OkdhTqYH0pPKyRE0uhUqu';
 
 export default class App extends React.Component {
@@ -45,7 +47,7 @@ export default class App extends React.Component {
 		this.setState({state_message: 'loading...'});
 
 		let start_time = Date.now();
-		let last_week_to_date = Math.floor(Date.now() / 1000) - (7 * 24 * 60 * 60);
+		let last_week_to_date = Math.floor((Date.now() - (7 * 24 * 60 * 60 * 1000)) / 1000);
 
 		let new_questions = await this.fetch_new_questions(last_week_to_date, data);
 		let top_questions = await this.fetch_top_questions(last_week_to_date, data);
@@ -53,13 +55,13 @@ export default class App extends React.Component {
 		if (new_questions !== undefined && top_questions !== undefined) {
 			this.setState({state_message: ''});
 
-			let questions = new_questions['items'].concat(top_questions['items']);
-			questions.sort((first, second) => {
+			let sorted_questions = new_questions['items'].concat(top_questions['items']);
+			sorted_questions.sort((first, second) => {
 				return second['creation_date'] - first['creation_date'];
 			});
 
 			this.setState({
-				questions: questions,
+				questions: sorted_questions,
 				state_message: ''
 			});
 		} else {
@@ -75,11 +77,11 @@ export default class App extends React.Component {
 				<SearchBar query = {this.get_questions} />
 				<p>{this.state.state_message}</p>
 				{
-					this.state.questions.map((question) => {
-						return <Dropdown question = {question} />
+					this.state.questions.map((item) => {
+						return <Dropdown question = {item} />
 					})
 				}
-				<p><i>last query took {this.state.fetch_time} seconds</i></p>
+				<p style = {{marginTop: '1rem'}}><i>last query took {this.state.fetch_time} seconds</i></p>
 			</div>
 		);
 	}

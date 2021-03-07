@@ -1,0 +1,166 @@
+
+
+{
+  "items": [
+    {
+      "comments": [
+        {
+          "owner": {
+            "reputation": 105,
+            "user_id": 1540460,
+            "user_type": "registered",
+            "display_name": "Robin",
+            "link": "https://stackoverflow.com/users/1540460/robin"
+          },
+          "score": 0,
+          "creation_date": 1614880007,
+          "post_id": 66478762,
+          "comment_id": 117527133,
+          "body": "What is your Visual Studio version? e.g. 16.8.5.x"
+        },
+        {
+          "owner": {
+            "reputation": 105,
+            "user_id": 1540460,
+            "user_type": "registered",
+            "display_name": "Robin",
+            "link": "https://stackoverflow.com/users/1540460/robin"
+          },
+          "score": 0,
+          "creation_date": 1614880343,
+          "post_id": 66478762,
+          "comment_id": 117527304,
+          "body": "Also, have you followed this guide? <a href=\"https://docs.nanoframework.net/content/getting-started-guides/getting-started-managed.html\" rel=\"nofollow noreferrer\">docs.nanoframework.net/content/getting-started-guides/&hellip;</a>"
+        },
+        {
+          "owner": {
+            "reputation": 1,
+            "user_id": 15330874,
+            "user_type": "registered",
+            "display_name": "Andy Houbař",
+            "link": "https://stackoverflow.com/users/15330874/andy-houba%c5%99"
+          },
+          "reply_to_user": {
+            "reputation": 105,
+            "user_id": 1540460,
+            "user_type": "registered",
+            "display_name": "Robin",
+            "link": "https://stackoverflow.com/users/1540460/robin"
+          },
+          "score": 0,
+          "creation_date": 1614931390,
+          "post_id": 66478762,
+          "comment_id": 117540977,
+          "body": "yes, i exactly followed this guide :)"
+        }
+      ],
+      "answers": [
+        {
+          "comments": [
+            {
+              "owner": {
+                "reputation": 1,
+                "user_id": 15330874,
+                "user_type": "registered",
+                "display_name": "Andy Houbař",
+                "link": "https://stackoverflow.com/users/15330874/andy-houba%c5%99"
+              },
+              "score": 1,
+              "creation_date": 1614880428,
+              "post_id": 66480352,
+              "comment_id": 117527338,
+              "body": "Microsoft Visual Studio Community 2019 Version 16.9.0"
+            }
+          ],
+          "owner": {
+            "reputation": 37,
+            "user_id": 13005829,
+            "user_type": "registered",
+            "display_name": "Jos&#233; Sim&#245;es",
+            "link": "https://stackoverflow.com/users/13005829/jos%c3%a9-sim%c3%b5es"
+          },
+          "score": 0,
+          "creation_date": 1614879973,
+          "answer_id": 66480352,
+          "question_id": 66478762,
+          "body": "<p>What is the Community version you're using?</p>\n"
+        },
+        {
+          "comments": [
+            {
+              "owner": {
+                "reputation": 1,
+                "user_id": 15330874,
+                "user_type": "registered",
+                "display_name": "Andy Houbař",
+                "link": "https://stackoverflow.com/users/15330874/andy-houba%c5%99"
+              },
+              "score": 0,
+              "creation_date": 1614932235,
+              "post_id": 66480574,
+              "comment_id": 117541293,
+              "body": "i have tried open webserver.sample from nanoframework repository, but the references are broken and nuget packages is not possible install (the same error which i described in my question) Package nanoFramework.CoreLibrary 1.7.3 is not compatible with netnanoframework10 (.NETnanoFramework,Version=v1.0). Package nanoFramework.CoreLibrary 1.7.3 supports: net (.NETFramework,Version=v0.0)"
+            }
+          ],
+          "owner": {
+            "reputation": 105,
+            "user_id": 1540460,
+            "user_type": "registered",
+            "display_name": "Robin",
+            "link": "https://stackoverflow.com/users/1540460/robin"
+          },
+          "score": 0,
+          "creation_date": 1614880913,
+          "answer_id": 66480574,
+          "question_id": 66478762,
+          "body": "<p>After a little test, there seems to be an issue with the latest release of VS2019. A work around would be to:\nUse V16.8.X</p>\n<p>or</p>\n<p>use an already created solution that you can edit.</p>\n<p>or</p>\n<p>add the required nuget to the project once it has been loaded (after the error):</p>\n<p><a href=\"https://i.stack.imgur.com/fcNr7.png\" rel=\"nofollow noreferrer\"><img src=\"https://i.stack.imgur.com/fcNr7.png\" alt=\"enter image description here\" /></a></p>\n<p>Update: now fixed! it was due to a change to fix nuget, but caused an unintended consequence with nanoFramework.</p>\n"
+        },
+        {
+          "comments": [
+            {
+              "owner": {
+                "reputation": 1,
+                "user_id": 15330874,
+                "user_type": "registered",
+                "display_name": "Andy Houbař",
+                "link": "https://stackoverflow.com/users/15330874/andy-houba%c5%99"
+              },
+              "score": 0,
+              "creation_date": 1614942793,
+              "post_id": 66491417,
+              "comment_id": 117545531,
+              "body": "i did vote....thank you very much."
+            }
+          ],
+          "owner": {
+            "reputation": 37,
+            "user_id": 13005829,
+            "user_type": "registered",
+            "display_name": "Jos&#233; Sim&#245;es",
+            "link": "https://stackoverflow.com/users/13005829/jos%c3%a9-sim%c3%b5es"
+          },
+          "score": 0,
+          "creation_date": 1614942287,
+          "answer_id": 66491417,
+          "question_id": 66478762,
+          "body": "<p>The webserver NuGet released today fixes the issues with the version mismatches.</p>\n<p>The issue with VS2019 16.9 remains. Reported to VS Developer Community <a href=\"https://developercommunity.visualstudio.com/t/nanoframework-templates-can-no-longer-be-created/1358051\" rel=\"nofollow noreferrer\">here</a>. Please up vote to help increase priority.</p>\n"
+        }
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 15330874,
+        "user_type": "registered",
+        "display_name": "Andy Houbař",
+        "link": "https://stackoverflow.com/users/15330874/andy-houba%c5%99"
+      },
+      "score": 0,
+      "last_activity_date": 1615079149,
+      "creation_date": 1614873976,
+      "question_id": 66478762,
+      "link": "https://stackoverflow.com/questions/66478762/package-installation-error-when-new-blank-application-in-nanoframework-is-create",
+      "title": "Package installation error when new blank application in nanoframework is created",
+      "body": "<p>When i try create new blank application in nanoframework, i get package installation error.</p>\n<p><a href=\"https://i.stack.imgur.com/u7ezf.png\" rel=\"nofollow noreferrer\">error message</a></p>\n<p>It seems some problem in nanoframework visual studio extension, my version is NET nanoFramework VS2019 Extension v2019.5.0.8.vsix, but i also tried another versions with same problem.</p>\n<p>I have visual studio 2019 community edition and i have installed almost all components.</p>\n<p>When i press ok, project is loaded, but is not possible compile it, because there are missing all assemblies. When i try add assembly, theres nothing to add and add nuget packages from nanoframework store leads to error.</p>\n<p>when i try this:</p>\n<blockquote>\n<p>pm&gt; Install-Package nanoFramework.CoreLibrary.NoReflection -Version\n1.10.1-preview.9</p>\n</blockquote>\n<p>I get this error:</p>\n<blockquote>\n<p>NU1202: Package nanoFramework.CoreLibrary.NoReflection\n1.10.1-preview.9 is not compatible with netnanoframework10 (.NETna noFramework,Version=v1.0). Package\nnanoFramework.CoreLibrary.NoReflection 1.10.1-preview.9 supports: net\n(.NETFramework,Version=v0.0)</p>\n</blockquote>\n<p>similiar when i try another package versions.</p>\n<p>So the extensions is installed incorectly, but i cant find why. i tried it more times. uninstall and install again. from extenstion store, and from disc. nothing successfull.</p>\n"
+    }
+  ]
+}
+

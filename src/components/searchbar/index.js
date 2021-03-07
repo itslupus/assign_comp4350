@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles.css';
+
 export default class SearchBar extends React.Component {
 	constructor(props){
 		super(props);
@@ -25,8 +27,8 @@ export default class SearchBar extends React.Component {
 	render() {
 		return (
 			<form onSubmit = {this.handle}>
-				<input onChange = {this.input} placeholder = 'eg. javascript' />
-				<button onClick = {this.handle}>press me</button>
+				<input onChange = {this.input} placeholder = 'eg. javascript, python' />
+				<button onClick = {this.handle}>search</button>
 			</form>
 		);
 	}
