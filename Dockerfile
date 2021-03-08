@@ -10,5 +10,3 @@ RUN apk add --no-cache --virtual .node_deps nodejs npm && \
 	apk del .node_deps && \
 	cp -r build/* /usr/share/nginx/html/ && \
 	rm -rf ./* 
-
-EXPOSE 80
