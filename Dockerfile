@@ -1,18 +1,14 @@
-FROM alpine:3.13.2
+FROM nginx:1.19.7-alpine
 
-RUN apk add --no-cache nodejs npm && \
-	wget https://github.com/itslupus/assign_comp4350/archive/master.zip && \
-	unzip master.zip && \
-	rm -f master.zip && \
-	cd assign_comp4350-master && \
+WORKDIR /root
+
+COPY . /root/
+
+RUN apk add --no-cache --virtual .node_deps nodejs npm && \
 	npm ci --quiet && \
-	npm run build --quiet && \
-	rm -rf node_modules && \
-	npm install -g serve --quiet && \
-	apk del npm
+	npm run build && \
+	apk del .node_deps && \
+	cp -r build/* /usr/share/nginx/html/ && \
+	rm -rf ./* 
 
-EXPOSE 5000
-
-WORKDIR /assign_comp4350-master/build
-
-CMD ["serve"]
+EXPOSE 80
